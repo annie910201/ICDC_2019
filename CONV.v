@@ -100,7 +100,7 @@ always @(posedge clk) begin
 end
 
 // next state logic 
-always @(posedge clk) begin
+always @(*) begin
 case(current_state)
 INITIAL:
 	next_state = (ready)?READ_K0: INITIAL;
